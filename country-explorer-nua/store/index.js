@@ -129,7 +129,7 @@ export const actions = {
         const url = `/v1/geo/cities/${cityId}/nearbyCities?radius=100`;
         const headers = {
             'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
-            'x-rapidapi-key': process.env.KEY,
+            'x-rapidapi-key': this.$config.key,
             'Content-type': 'application/json'
         }
         try {
