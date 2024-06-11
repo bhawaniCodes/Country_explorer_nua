@@ -47,6 +47,10 @@ export default {
     baseURL: process.env.BASE_URL
   },
 
+  publicRuntimeConfig: {
+    key: process.env.KEY
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],

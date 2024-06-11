@@ -112,7 +112,7 @@ export const actions = {
         }
         const headers = {
             'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
-            'x-rapidapi-key': process.env.KEY,
+            'x-rapidapi-key': this.$config.key,
             'Content-type': 'application/json'
         }
         try {
@@ -127,7 +127,6 @@ export const actions = {
     },
     async fetchNearbyCities ({state}, cityId) {
         const url = `/v1/geo/cities/${cityId}/nearbyCities?radius=100`;
-        console.log('key', process.env.KEY, process.env.BASE_URL);
         const headers = {
             'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
             'x-rapidapi-key': process.env.KEY,
