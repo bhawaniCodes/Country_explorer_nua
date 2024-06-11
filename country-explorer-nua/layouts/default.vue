@@ -9,8 +9,9 @@
           dark
           prominent
         >
-          <template>
+          <div class="d-flex justify-left align-center">
             <v-text-field
+              max-width="200px"
               height="39px"
               class="search-style"
               :color="color?.text"
@@ -25,7 +26,7 @@
             <v-btn icon @click="clearSearch">
               <v-icon>mdi-close</v-icon>
             </v-btn>
-          </template>
+          </div>
 
           <div>
             <v-switch
@@ -64,6 +65,9 @@
       },
       citiesData () {
         return this.$store.getters['getCities'] || [];
+      },
+      isDesktop () {
+        return this.$vuetify.breakpoint.mdAndUp;
       },
     },
     methods: {
@@ -107,5 +111,11 @@
 
 .search-style {
   height: 38px;
+}
+
+@media (min-width: 756px) {
+  .search-style {
+    width: 50%;
+  }
 }
 </style>
